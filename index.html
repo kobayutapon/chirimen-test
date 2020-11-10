@@ -1,1 +1,70 @@
-<html></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+  </head>
+
+  <script src="https://cdn.jsdelivr.net/npm/@chirimen/microbit"></script>
+
+  <body>
+    <form name="js">
+      <input type="button" value="Connect" onclick="connect();" />
+      <input type="button" value="Disconnect" onclick="disconnect();" />
+    </form>
+    <div id="msg">---</div>
+    <hr />
+    <table>
+      <tr>
+        <td>モーター1</td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            id="speed1"
+            style="width: 50px;"
+            type="text"
+            value="0"
+          />(0..1024)
+        </td>
+        <td>
+          <input type="button" value="前進" onclick="motor1_forward();" />
+        </td>
+        <td><input type="button" value="後進" onclick="motor1_back();" /></td>
+        <td><input type="button" value="停止" onclick="motor1_stop();" /></td>
+      </tr>
+      <tr>
+        <td>モーター2</td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            id="speed2"
+            style="width: 50px;"
+            type="text"
+            value="0"
+          />(0..1024)
+        </td>
+        <td>
+          <input type="button" value="前進" onclick="motor2_forward();" />
+        </td>
+        <td><input type="button" value="後進" onclick="motor2_back();" /></td>
+        <td><input type="button" value="停止" onclick="motor2_stop();" /></td>
+      </tr>
+      <tr>
+        <td>DRV8830</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="前進" onclick="drv8830_forward();" />
+        </td>
+        <td><input type="button" value="後進" onclick="drv8830_back();" /></td>
+        <td>
+          <input type="button" value="ブレーキ" onclick="drv8830_break();" />
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script src="main.js"></script>
+</html>
